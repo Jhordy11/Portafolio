@@ -37,7 +37,7 @@ export default function Proyectos() {
     { name: "Portafolio",
       imgs: ["p41.jpg", "p42.jpg", "p43.jpg", "p44.jpg", "p45.jpg"],
       iconos: [<AiFillHtml5 />, <IoLogoCss3 />, <IoLogoJavascript />],
-      linkGit: "https://github.com/Jhordy11/Reto2",
+      linkGit: "https://github.com/Jhordy11/Portafolio",
       linkVis: "https://jhordy11.github.io/Reto2/",
     },
   ];
