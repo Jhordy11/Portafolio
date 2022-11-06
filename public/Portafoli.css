@@ -1,0 +1,19 @@
+
+.portafolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Carter One", cursive;
+  background: radial-gradient(
+    circle at bottom ,
+    rgba(230, 196, 93, 1) 1%,
+    rgba(182, 119, 82, 1) 33%,
+    rgba(200, 106, 74, 1) 58%,
+    rgba(65, 41, 43, 1) 92%
+  );
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+

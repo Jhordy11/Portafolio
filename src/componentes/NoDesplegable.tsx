@@ -1,0 +1,55 @@
+import { Link } from "react-scroll";
+export default function NoDesplegable(){
+    return <div className="nav__noDesplegable">
+      <Link
+          to="inicio"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="nav__desplegable__li"
+        >
+          Inicio
+        </Link>
+         <Link
+          to="sobreMi"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="nav__desplegable__li"
+        >
+          Sobre mí
+        </Link>
+        <Link
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="nav__desplegable__li"
+        >
+          Skills
+        </Link>
+        <Link
+          to="proyectos"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="nav__desplegable__li"
+        >
+          Proyectos
+        </Link>
+        <Link
+          to="contacto"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={1000}
+          className="nav__desplegable__li"
+        >
+          Contacto
+        </Link>
+    </div>
+}

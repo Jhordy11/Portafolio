@@ -1,0 +1,60 @@
+:root{
+  --tamño-de-svg:1;
+}
+.svgAnimado {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  right: 90%;
+  display: flex;
+  justify-self: start;
+  justify-content: center;
+  align-items: start;
+  z-index: -1;
+}
+.fondo__svg{
+  width: 400%;
+  height:110vh;
+}
+
+@media screen and (min-width: 375px) {
+  .fondo__svg{
+    width: 400%;
+    height:110vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .svgAnimado {
+    height:140vh;
+    right:50%;
+  }
+  .fondo__svg{
+    height:140vh;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .svgAnimado {
+    right:10%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .svgAnimado {
+  height: 150vh;
+    right:0
+  }
+  .fondo__svg{
+    height:150vh;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .svgAnimado {
+  height: 200vh;
+    right:0
+  }
+  .fondo__svg{
+    height:200vh;
+  }
+}

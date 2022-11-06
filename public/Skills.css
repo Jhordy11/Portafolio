@@ -1,0 +1,187 @@
+:root {
+    --tamaño-icon: 60px;
+    --tamañpo-icon: 60px;
+    --desplazmiento-icon-y: calc(var(--tamaño-icon) + 6px);
+    --desplazmiento-icon-x: 4px;
+    --deplazamiento-nombre: 2;
+  }
+
+.skills{
+    width: 100%;
+    height: calc(100vh - 55px);
+    padding-top:  55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    z-index: 5;
+}
+
+.skills__tituloPrincipal{
+    font-size: 250%;
+    color: #faf7cee5;
+    text-shadow: -4px 2px 2px rgba(148, 16, 16, 0.8);
+    user-select: none;
+}
+
+.skills__tituloSecundario{
+    font-size: 200%;
+    font-family: 'Sriracha', cursive;
+    color: #faf7cee5;
+    text-shadow: -4px 2px 2px rgba(148, 16, 16, 0.8);
+    user-select: none ;
+}
+.skills__icons {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    gap: 10px;
+}
+.skills__icons__detalles{
+    width: 80px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.skills__icons__detalles__icon{
+    width: var(--tamaño-icon);
+    height: var(--tamaño-icon);
+position: relative;
+right: var(--desplazmiento-icon-x);;
+}
+
+.skills__icons__detalles__icon> svg:first-child{
+    width: var(--tamaño-icon);
+    height: var(--tamaño-icon);
+    position: relative;
+    fill: rgba(148, 16, 16, 0.8);
+    filter: blur(3px);
+}
+.skills__icons__detalles__icon> svg:nth-child(2){
+    position: relative;
+    left: var(--desplazmiento-icon-x);
+    bottom: var(--desplazmiento-icon-y);
+    width: var(--tamaño-icon);
+    height: var(--tamaño-icon);
+    fill: #faf7ced8;
+}
+.skills__icons__detalles__nombre{
+    position: relative;
+    bottom:calc( var(--desplazmiento-icon-y) - var(--desplazmiento-icon-y)/2.5 );
+    background: #f8f4bd;
+    padding: 2px;
+    box-shadow: -3px 3px 6px rgba(148, 16, 16, 1);
+    border-radius: 3px;
+    color:rgba(148, 16, 16, 0.8);
+    opacity: 0;
+    user-select: none;
+}
+.skills__icons__detalles:hover > div:nth-child(2){
+    animation: aparecerNombre  linear 300ms  both;
+}
+.skills__icons__detalles__nivel{
+    position: relative;
+    bottom: 20px;;
+    font-size: 100%;
+    font-family: 'Sriracha', cursive;
+    color: #faf7ced8;
+    text-shadow: -2px 2px 2px rgba(148, 16, 16, 0.8);
+    user-select: none ;
+}
+
+@keyframes aparecerNombre{
+0%{
+    transform: scale(1)
+}
+100%{
+    opacity: 1;
+    transform:translate(10px,-10px)scale(1.2)
+}
+
+}
+
+@media screen and (min-width: 375px) {
+    :root {
+        --tamaño-icon: 85px;
+        --tamañpo-icon: 85px;
+        --desplazmiento-icon-y: calc(var(--tamaño-icon) + 6px);
+        --desplazmiento-icon-x: 4px;
+      }
+      .skills__icons__detalles{
+        width: 95px;
+        height: 105px;
+      }
+      .skills__tituloPrincipal{
+        font-size: 275%;
+    
+    }
+    
+    .skills__tituloSecundario{
+        font-size: 200%;
+    }
+    .skills__icons__detalles__nivel{
+        font-size: 125%;
+    }
+}
+@media screen and (min-width: 768px) {
+    :root {
+        --tamaño-icon: 85px;
+        --tamañpo-icon: 85px;
+        --desplazmiento-icon-y: calc(var(--tamaño-icon) + 6px);
+        --desplazmiento-icon-x: 4px;
+      }
+      .skills{
+        gap: 25px;
+      }
+      .skills__icons {
+        width: 85%;
+    }
+      .skills__icons__detalles{
+        width: 120px;
+        height: 110px;
+      }
+      .skills__tituloPrincipal{
+        font-size: 300%;
+    
+    }
+    
+    .skills__tituloSecundario{
+        font-size: 225%;
+    }
+    .skills__icons__detalles__nivel{
+        font-size: 150%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    :root {
+        --tamaño-icon: 95px;
+        --tamañpo-icon: 95px;
+        --desplazmiento-icon-y: calc(var(--tamaño-icon) + 6px);
+        --desplazmiento-icon-x: 4px;
+      }
+
+      .skills__icons {
+        width: 900px;
+    }
+      .skills__icons__detalles{
+        width: 130px;
+        height: 120px;
+      }
+      .skills__tituloPrincipal{
+        font-size: 350%;
+    
+    }
+    
+    .skills__tituloSecundario{
+        font-size: 250%;
+    }
+    .skills__icons__detalles__nivel{
+        font-size: 175%;
+    }
+}

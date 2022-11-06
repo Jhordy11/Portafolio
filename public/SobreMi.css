@@ -1,0 +1,212 @@
+:root{
+  --tamaño-yo: 195px;
+  --tamaño-sobreMi-presentacion : 85%;
+}
+
+.sobreMi {
+  padding-top: 55px;
+  width: 100%;
+  height: calc(100vh - 55px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+
+.sobreMi__fotoYo {
+  width: var(--tamaño-yo);
+  height:var(--tamaño-yo);
+  border-radius: 100%;
+  animation:shadowAnimadoS linear 7s infinite;
+}
+.sobreMi__fondo{
+  position: absolute;
+  width:calc(var(--tamaño-yo) + 10px) ;
+  height:calc(var(--tamaño-yo) + 10px);
+  z-index: -1;
+  top: calc(50px + (( 240px - var(--tamaño-yo) ) / 2));
+  animation: rotar linear infinite 10s;
+}
+
+.sobreMi__fondo__mitad{
+  width:100%;
+  height:50%;
+}
+
+.sobreMi__fondo__mitad:first-child{
+  background:linear-gradient( rgba(0, 0, 0, 0),rgba(148, 16, 16, 0.7)90%,#faf7cece 100%) ;
+  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%; 
+}
+.sobreMi__fondo__mitad:nth-child(2){
+  background:linear-gradient( #faf7cece,rgba(0, 0, 0, 0));
+  border-radius:50% 50% 50% 50% / 0% 0% 100% 100% ;
+}
+
+.sobreMi__presentación{
+  height:calc(100vh - 300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--tamaño-sobreMi-presentacion);
+  justify-content: space-around;
+}
+.sobreMi__presentación__titulo {
+  color: #faf7ce;
+  text-align: center;
+  text-shadow: -4px 2px 5px rgba(148, 16, 16, 0.8);
+  font-size: 170% ;
+  user-select: none ;
+}
+.sobreMi__presentación__palabras{
+  color: #faf7cee7;
+  text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
+  text-align: justify;
+  font-size: 115% ;
+  font-family: 'Sriracha', cursive;
+  user-select: none ;
+}
+
+.sobreMi__presentacion__iconos{
+  display: flex;
+  gap: 25px;
+}
+.sobreMi__presentacion__iconos__a{
+  height: 37px;
+  width: 37px;
+  fill:#faf7ce;
+  box-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
+  border-radius: 5px;
+  animation: linkAnimacionS  linear 1s infinite;
+}
+
+.sobreMi__presentacion__iconos__icon{
+  height: 41px;
+  width: 41px;
+  right: 2px;
+  top: -2px;
+  position: relative;
+  box-sizing: content-box;
+  fill:#faf7ce;
+  user-select: none ; 
+}
+
+.sobreMi__presentacion__iconos__a:hover{
+  animation: linkAnimacionS  linear 1s infinite;
+}
+
+@keyframes shadowAnimadoS {
+  0% {
+    box-shadow:0 0 10px #ff4000;
+  }
+  25%{
+    box-shadow:0 0 30px #f3c53b;
+  }
+  50%{
+    box-shadow:0 0 10px rgb(117, 17, 17);
+  }
+  75%{
+    box-shadow:0 0 30px #f3c53b;
+  }
+  100% {
+    box-shadow:0 0 10px #ff4000;
+  }
+}
+
+@keyframes linkAnimacionS {
+  0% {
+    box-shadow:0 0 15px rgb(148, 16, 16);
+  }
+
+  50%{
+    box-shadow:0 0 25px #C86A4A;
+    transform: translate(0,-2px)
+  }
+
+  100% {
+    box-shadow:0 0 15px rgb(148, 16, 16);
+  }
+}
+
+@keyframes rotar {
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+
+@media screen and (min-width: 375px) {
+  :root{
+    --tamaño-yo: 215px
+  }
+  .sobreMi__presentación{
+    justify-content: center;
+    gap: 15px;
+    width: 82%;
+  }
+  .sobreMi__presentación__titulo {
+    font-size: 220% ;
+  }
+  .sobreMi__presentación__palabras{
+    font-size: 150% ;
+  }
+  .sobreMi__presentacion__iconos__a{
+    height: 48px;
+    width: 48px;
+  }
+  
+  .sobreMi__presentacion__iconos__icon{
+    height: 52px;
+    width: 52px;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  :root{
+    --tamaño-yo: 250px;
+    --tamaño-pre :50%;
+  }
+  .sobreMi{
+    flex-direction: row;
+    justify-content:center;
+    gap:30px;
+  }
+  .sobreMi__fondo{
+    top:calc(((100vh - 55px - var(--tamaño-yo)) / 2) + 50px) ;
+    left:calc(((100% - var(--tamaño-pre) - 30px - var(--tamaño-yo)) / 2) - 5px);
+  }
+  
+  .sobreMi__presentación{
+    width: var(--tamaño-pre);
+    justify-content: center;
+    gap:20px;
+  }
+  .sobreMi__presentación__palabras{
+    font-size: 140% ;
+  }
+ 
+}
+@media screen and (min-width: 1024px) {
+  .sobreMi{
+    width: 1024px;
+  }
+  :root{
+    --tamaño-yo: 255px;
+    --tamaño-pre :64%;
+  }
+  .sobreMi__presentación__titulo {
+    font-size: 250% ;
+  }
+  .sobreMi__presentación__palabras{
+    font-size: 165% ;
+  }
+  .sobreMi__presentacion__iconos__a{
+    animation: none;
+  }
+
+}
