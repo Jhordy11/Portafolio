@@ -214,3 +214,13 @@
     }
 }
 
+@media screen and (min-width: 768px) and (max-height: 600px) {
+  :root{
+    --tamaño-card-x :400px ;
+    --tamaño-card-y : 200px;
+    --tamaño-iconos : 35px;
+    --tamaño-iconost : 25px;
+    --tamaño-name-card : 25px;
+  }
+
+}
