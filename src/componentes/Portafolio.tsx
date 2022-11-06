@@ -4,7 +4,7 @@ import SobreMi from './SobreMi'
 import Skills from './Skills'
 import Proyectos from './Proyectos'
 import Contacto from './Contacto'
-import "/public/portafoli.css"
+import "/public/Portafoli.css"
 import Inicio from './Inicio'
 export default function Portafolio() {
   const [pantallaTI, setPantallaTI] = useState<number>(0)
