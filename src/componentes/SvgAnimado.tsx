@@ -1,16 +1,15 @@
-
-import "/public/com.css"
+import { useEffect, useRef, useState } from "react";
+import "/public/com.css";
 export default function SvgAnimado() {
+  const [cambiar, setCambiar] = useState(false);
+  const [pDeCambio, setPDeCambio] = useState(0);
+  useEffect(() => {
+    innerWidth > innerHeight ? setCambiar(true): setCambiar(false);
+  }, [innerWidth, innerHeight]);
 
-
-    const svg:string[] =["pa1","pa2","pa3","pa4","pa5"]
-    const icons:string[] =["ic1","ic2","ic3","ic4","ic5"]
   return (
-    <div className="svgAnimado">
-      <img className="fondo__svg" src={`/compa/pa1.svg`} alt="pa1"/>
-
-  
-    
+    <div className="svgAnimado" style={{ height: cambiar?"":"120vh",width: cambiar? `150%`:""}}>
+      <img className="fondo__svg" src={`/compa/pa1.svg`} alt="pa1" style={{ height: cambiar?"":"100%",width: cambiar? "100%":""}}/>
     </div>
-  )
+  );
 }
