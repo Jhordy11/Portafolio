@@ -40,6 +40,12 @@ export default function Proyectos() {
       linkGit: "https://github.com/Jhordy11/Portafolio",
       linkVis: "https://jhordyaguas.vercel.app/",
     },
+    { name: "Ecommerce",
+      imgs: ["p51.jpg", "p52.jpg", "p53.jpg", "p54.jpg", "p55.jpg"],
+      iconos: [<FaReact />,<FaNode /> , <IoLogoCss3 />],
+      linkGit: "https://github.com/Jhordy11/ecommerce",
+      linkVis: "https://jh-shop.vercel.app/",
+    },
   ];
 
 
