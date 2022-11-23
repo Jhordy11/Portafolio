@@ -46,7 +46,6 @@
   .proyectos{
     padding-top: 55px ;
     padding-bottom: 0;
-    height: calc(100vh - 55px);
     justify-content: center;
   }
   .proyectos__titulo {
@@ -64,7 +63,6 @@
   .proyectos{
     padding-top: 45px ;
     padding-bottom: 0;
-    height: calc(100vh - 55px);
     justify-content: center;
   }
   .proyectos__titulo {
@@ -85,6 +83,6 @@
   .proyectos__proyecto {
     justify-content: center;
     gap: 30px;
-    width: 50%;
+    width: calc(0.7 * 1920px);
   }
 }
