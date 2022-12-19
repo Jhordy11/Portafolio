@@ -14,7 +14,7 @@
 .topScroll>svg{
     width: 35px;
     height: 35px;
-    fill:rgba(107, 0, 0, 0.733) ;
+    fill:rgba(65, 41, 43, 0.8);
 }
 @keyframes rotacionSimpleScroll {
     0%{
@@ -35,13 +35,11 @@
 }
 @media screen and (min-width: 720px) {
     .topScroll{
- 
         bottom: 50px ;
     }
     .topScroll>svg{
         width: 50px;
         height: 50px;
-        fill:rgba(107, 0, 0, 0.733) ;
     }
   }
   
