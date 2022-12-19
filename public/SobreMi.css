@@ -64,7 +64,8 @@
   text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
   text-align: justify;
   font-size: 115% ;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
   user-select: none ;
 }
 

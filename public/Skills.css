@@ -26,7 +26,8 @@
 
 .skills__tituloSecundario{
     font-size: 200%;
-    font-family: 'Sriracha', cursive;
+    font-family: 'Roboto', sans-serif;
+  font-weight: 600;
     color: #faf7cee5;
     text-shadow: -4px 2px 2px rgba(148, 16, 16, 0.8);
     user-select: none ;
@@ -88,7 +89,8 @@ right: var(--desplazmiento-icon-x);;
     position: relative;
     bottom: 20px;;
     font-size: 100%;
-    font-family: 'Sriracha', cursive;
+    font-family: 'Roboto', sans-serif;
+  font-weight: 500;
     color: #faf7ced8;
     text-shadow: -2px 2px 2px rgba(148, 16, 16, 0.8);
     user-select: none ;

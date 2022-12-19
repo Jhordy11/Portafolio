@@ -108,7 +108,8 @@
   text-align: center;
   text-shadow: -2px 2px 5px rgba(148, 16, 16, 0.8);
   color:#faf7ce;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 @keyframes linkAnimacion {
     0% {
