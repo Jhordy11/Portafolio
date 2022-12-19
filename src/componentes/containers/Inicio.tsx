@@ -1,10 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import SvgAnimado from "./SvgAnimado";
+import useScreenSize from "../../hooks/useScreenSize";
+import SobreMi from "./SobreMi";
+import SvgAnimado from "../pure/SvgAnimado";
 import "/public/Inicio.css";
 export default function Inicio() {
   const refSaludo = useRef<any>();
   const refNombre = useRef<any>();
   const refTra = useRef<any>();
+  const { width } = useScreenSize();
+
+
   function numRam(): number {
     return (
       (0.5 - Math.round(Math.random())) *
@@ -12,6 +17,7 @@ export default function Inicio() {
       (innerHeight > innerWidth ? innerHeight : innerWidth)
     );
   }
+
 
   function obtenerPosicionObjeto(refere: React.MutableRefObject<any>) {
     let tamaPosi = refere.current.getBoundingClientRect();
@@ -220,6 +226,7 @@ export default function Inicio() {
           </span>
         </section>
       </section>
+      {width>=1920? <SobreMi/>:""}
       <SvgAnimado />
     </div>
   );

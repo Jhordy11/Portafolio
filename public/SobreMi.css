@@ -230,3 +230,32 @@
   }
 
 }
+@media screen and (min-width: 1920px) {
+  .sobreMi{
+    width: 600px;
+    padding-top:0;
+    height: auto;
+  flex-direction: column;
+  }
+  :root{
+    --tamaño-yo: 255px;
+    --tamaño-pre :64%;
+  }
+  .sobreMi__presentación{
+    width: 100%;
+    height:auto;
+  }
+  .sobreMi__presentación__titulo {
+    font-size: 250% ;
+  }
+  .sobreMi__presentación__palabras{
+    font-size: 165% ;
+  }
+  .sobreMi__presentacion__iconos__a{
+    animation: none;
+  }
+  .sobreMi__fotoYo {
+    display: none;
+  }
+
+}

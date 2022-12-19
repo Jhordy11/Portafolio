@@ -207,3 +207,10 @@ right: var(--desplazmiento-icon-x);;
         font-size: 175%;
     }
 }
+@media screen and (min-width: 1920px) {
+      .skills{
+        height: auto;
+        padding: 100px;
+        gap: 20px;
+      }
+}

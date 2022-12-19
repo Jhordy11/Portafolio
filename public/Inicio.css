@@ -247,3 +247,18 @@
     font-size: 40px;
   }
 }
+@media screen and (min-width: 1920px) {
+  :root {
+    --altura-inicial-letras: 600px;
+  }
+  .inicio {
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+  }
+  .letrasInicio {
+    width: auto;
+    margin: 0;
+  }
+}

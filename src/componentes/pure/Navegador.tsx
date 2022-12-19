@@ -2,10 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import "/public/Navegador.css";
 import Desplegable from "./Desplegable";
 import NoDesplegable from "./NoDesplegable";
-interface Props {
-  moves: { diferencia: number; pantallaS: number };
+import {moves} from "../../models/moves"
+export interface Props {
+  moves: moves;
 }
-
 export default function Navegador({ moves }: Props) {
   const [estadoS, setEstadoS] = useState(0);
   const [estadoT, setEstadoT] = useState<number>(0);

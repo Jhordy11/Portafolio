@@ -2,15 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import "/public/Card.css";
 import { AiFillGithub } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
-
+import {card} from "../../models/card"
 interface Props {
-  card: {
-    name:string;
-    imgs: string[];
-    iconos: JSX.Element[];
-    linkGit: string;
-    linkVis: string;
-  };
+  card: card
 }
 export default function CardProyecto({ card }: Props) {
   const [imgs, setImgs] = useState(card.imgs)

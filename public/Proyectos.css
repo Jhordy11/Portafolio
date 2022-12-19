@@ -75,11 +75,14 @@
   }
 }
 @media screen and (min-width: 1920px) {
+  .proyectos {
+    padding: 75px;
+  }
 
   .proyectos__titulo {
     font-size: 350%;
   }
-
+  
   .proyectos__proyecto {
     justify-content: center;
     gap: 30px;
