@@ -93,6 +93,11 @@
   user-select: none ; 
 }
 
+.sobreMi__presentacion__iconos__a:nth-child(3)>svg{
+  transform: scale(0.93);
+  right: 1px;
+  top: -3px;
+}
 .sobreMi__presentacion__iconos__a:hover{
   animation: linkAnimacionS  linear 1s infinite;
 }

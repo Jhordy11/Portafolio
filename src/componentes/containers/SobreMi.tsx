@@ -1,12 +1,13 @@
 import "/public/SobreMi.css";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
 export default function SobreMi() {
   return (
     <div className="sobreMi" id="sobreMi">
       <img
         className="sobreMi__fotoYo"
         src="/imagenes/jhordy.jpg"
-        alt="foto-jhordy"
+        alt="jhordyaguas"
         data-aos="zoom-in"
         data-aos-delay="100"
       />
@@ -48,6 +49,14 @@ export default function SobreMi() {
             rel="noopener noreferrer"
           >
             <FaLinkedin className="sobreMi__presentacion__iconos__icon" />
+          </a>
+          <a
+            className="sobreMi__presentacion__iconos__a"
+            href="/Curriculum-Jhordy-Aguas.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ImProfile className="sobreMi__presentacion__iconos__icon" />
           </a>
         </div>
       </div>
