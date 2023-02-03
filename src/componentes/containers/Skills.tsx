@@ -2,7 +2,7 @@ import "/public/Skills.css";
 import { AiFillHtml5 } from "react-icons/ai";
 import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io";
 import { FaReact, FaNode } from "react-icons/fa";
-import { SiTailwindcss, SiExpress, SiJava } from "react-icons/si";
+import { SiTailwindcss, SiExpress, SiJava,SiMysql,SiMongodb} from "react-icons/si";
 interface tecnologia {
   icono: JSX.Element;
   nombre: string;
@@ -21,6 +21,8 @@ export default function Skills() {
     { icono: <FaNode />, nombre:"Node",nivel: "Básico" },
     { icono: <SiExpress />, nombre:"Express",nivel: "Básico" },
     { icono: <SiJava />, nombre:"Java",nivel: "Básico" },
+    { icono: <SiMysql />, nombre:"MySQL",nivel: "Básico" },
+    { icono: <SiMongodb />, nombre:"MongoDB",nivel: "Básico" }
   ];
   function iconos(tecnologia: tecnologia, index: number) {
     const { icono,nombre ,nivel } = tecnologia;
