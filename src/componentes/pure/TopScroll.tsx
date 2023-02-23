@@ -1,37 +1,35 @@
-
-import { Link } from 'react-scroll'
-import { BsFillArrowUpSquareFill} from 'react-icons/bs';
+import { Link } from "react-scroll";
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import "/public/TopScroll.css";
-import { useEffect, useState } from 'react';
-import {moves} from "../../models/moves"
-export interface Props {
-  moves: moves;
-  usoScroll: boolean;
-}
-export default function TopScroll( {moves ,usoScroll}: Props) {
-    const{diferencia, pantallaS} = moves;
-    const [activo, setActivo] = useState<boolean>(false);
+import { useEffect, useState } from "react";
 
-    function handleOnclick(){
-        setActivo(false)
-    }
+export default function TopScroll() {
+  const [opacityButton, setOpacity] = useState(0)
 
-    useEffect(() => {
-        diferencia !=0 || pantallaS !=0? setActivo(true):{};
-      }, [diferencia,usoScroll]);
+  function animarSroll() {
+    window.scrollY == 0
+      ? setOpacity(0)
+      : setOpacity(1);
+  }
+  function animarSrollClick() {
+    setOpacity(0)
+  }
 
+  useEffect(() => {addEventListener("scroll", () => animarSroll());
+  }, [])
+  
   return (
     <Link
-          to="inicio"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={1000}
-          className="topScroll"
-          style={{opacity:activo?"1":"0"}}
-        onClick={handleOnclick}
-        >
-          <BsFillArrowUpSquareFill/>
-        </Link>
-  )
+      to="inicio"
+      spy={true}
+      smooth={true}
+      offset={0}
+      duration={1000}
+      className="topScroll"
+      style={{opacity:opacityButton}}
+      onClick={animarSrollClick}
+    >
+      <BsFillArrowUpSquareFill />
+    </Link>
+  );
 }
