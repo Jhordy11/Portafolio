@@ -35,7 +35,7 @@ export default function Portafolio() {
       }}
     >
       <Navegador moves={{ diferencia, pantallaS }} />
-      <TopScroll moves={{ diferencia, pantallaS }} usoScroll={usoScroll}/>
+      <TopScroll/>
       <Inicio />
       {width < 1920 ? <SobreMi /> : ""}
       <Skills />
