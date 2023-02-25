@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
+import useScreenSize from "../../hooks/useScreenSize";
 export default function Desplegable() {
   const [activoUl, setActivoUl] = useState<boolean>(false);
+  const { width } = useScreenSize();
   const refUl = useRef<any>(null);
   const refBtn = useRef<any>(null);
   //funcion animacion
@@ -17,25 +19,38 @@ export default function Desplegable() {
   function handleBtn() {
     setActivoUl(!activoUl);
   }
+  function handleLink(){
+      if (width < 762) {
+        desactivarTodasLasAnimaciones();
+        setActivoUl(!activoUl);
+      }
+  }
   function animacionUl() {
     if (activoUl) {
-      animarAparecer(
-        refUl.current,
-        "flex",
-        "aparecerUl 1s cubic-bezier(0,1, 1, 1)"
-      );
-      animacionLi();
-      animarAparecer(refBtn.current, "block", "btnUl 500ms linear forwards");
-     blurContenido(5);
+      activarTodasLasAnimaciones();
     } else {
-      animarEsconder(
-        refUl.current,
-        "desaparecerPadre 600ms cubic-bezier(0,1, 1, 1) forwards"
-      );
-      animarEsconder(refBtn.current, "btnUl2 500ms linear forwards");
-      animacionLiRest();
-    blurContenido(0);
+      desactivarTodasLasAnimaciones();
     }
+  }
+
+  function activarTodasLasAnimaciones() {
+    animarAparecer(
+      refUl.current,
+      "flex",
+      "aparecerUl 1s cubic-bezier(0,1, 1, 1)"
+    );
+    animacionLi();
+    animarAparecer(refBtn.current, "block", "btnUl 500ms linear forwards");
+    blurContenido(5);
+  }
+  function desactivarTodasLasAnimaciones() {
+    animarEsconder(
+      refUl.current,
+      "desaparecerPadre 600ms cubic-bezier(0,1, 1, 1) forwards"
+    );
+    animarEsconder(refBtn.current, "btnUl2 500ms linear forwards");
+    animacionLiRest();
+    blurContenido(0);
   }
   //animacion li
   function animacionLi() {
@@ -43,7 +58,7 @@ export default function Desplegable() {
       animarAparecer(
         refUl.current.children[i],
         "block",
-        `aparecerLetra ${((i+1)*200)}ms cubic-bezier(0,1, 1, 1) `
+        `aparecerLetra ${(i + 1) * 200}ms cubic-bezier(0,1, 1, 1) `
       );
     }
   }
@@ -63,25 +78,34 @@ export default function Desplegable() {
       i < refBtn.current.parentElement.parentElement.children.length;
       i++
     ) {
-      refBtn.current.parentElement.parentElement.children[i].style.filter  = `blur(${pixeles}px)`;
+      refBtn.current.parentElement.parentElement.children[
+        i
+      ].style.filter = `blur(${pixeles}px)`;
     }
   }
 
   useEffect(() => {
     animacionUl();
   }, [activoUl]);
+  useEffect(() => {
+    if (width >= 762) {
+      blurContenido(0)
+    }
+  }, [width]);
+  
+  
   return (
     <>
       <button ref={refBtn} className="nav__buttom" onClick={handleBtn} />
 
       <ul className="nav__desplegable" ref={refUl}>
-      <Link
+        <Link
           to="inicio"
           spy={true}
           smooth={true}
           offset={0}
           duration={1000}
-          onClick={handleBtn}
+          onClick={handleLink}
           onMouseOut={(e) => evitarConflictoDeAnimacion(0)}
           className="nav__desplegable__li"
         >
@@ -93,7 +117,7 @@ export default function Desplegable() {
           smooth={true}
           offset={0}
           duration={1000}
-          onClick={handleBtn}
+          onClick={handleLink}
           onMouseOut={(e) => evitarConflictoDeAnimacion(1)}
           className="nav__desplegable__li"
         >
@@ -105,7 +129,7 @@ export default function Desplegable() {
           smooth={true}
           offset={0}
           duration={1000}
-          onClick={handleBtn}
+          onClick={handleLink}
           onMouseOut={(e) => evitarConflictoDeAnimacion(2)}
           className="nav__desplegable__li"
         >
@@ -117,7 +141,7 @@ export default function Desplegable() {
           smooth={true}
           offset={0}
           duration={1000}
-          onClick={handleBtn}
+          onClick={handleLink}
           onMouseOut={(e) => evitarConflictoDeAnimacion(3)}
           className="nav__desplegable__li"
         >
@@ -129,7 +153,7 @@ export default function Desplegable() {
           smooth={true}
           offset={0}
           duration={1000}
-          onClick={handleBtn}
+          onClick={handleLink}
           onMouseOut={(e) => evitarConflictoDeAnimacion(4)}
           className="nav__desplegable__li"
         >

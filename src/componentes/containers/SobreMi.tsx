@@ -1,21 +1,24 @@
 import "/public/SobreMi.css";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
+import { useEffect, useRef } from "react";
 export default function SobreMi() {
   return (
     <div className="sobreMi" id="sobreMi">
-      <img
-        className="sobreMi__fotoYo"
-        src="/imagenes/jhordy.jpg"
-        alt="jhordyaguas"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-      />
-      <div className="sobreMi__fondo" data-aos="zoom-in"
-        data-aos-delay="0">
-        <div className="sobreMi__fondo__mitad"></div>
-        <div className="sobreMi__fondo__mitad"></div>
+      <div className="sobreMi__foto__container">
+        <img
+          className="sobreMi__fotoYo"
+          src="/imagenes/jhordy.jpg"
+          alt="jhordyaguas"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        />
+        <div className="sobreMi__fondo" data-aos="zoom-in" data-aos-delay="0">
+          <div className="sobreMi__fondo__mitad"></div>
+          <div className="sobreMi__fondo__mitad"></div>
+        </div>
       </div>
+
       <div className="sobreMi__presentación">
         <div data-aos="fade-down" data-aos-delay="150">
           <h1 className="sobreMi__presentación__titulo">Un Poco Sobre Mí</h1>
@@ -26,7 +29,11 @@ export default function SobreMi() {
           data-aos="fade-down"
           data-aos-delay="200"
         >
-          Soy de Ecuador. Estudio Tecnología en Desarrollo de Software en la Escuela Politécnica Nacional (EPN). Ahora por iniciativa propia me encuentro como Trainee Fullstack tomando como base el stack MERN, además de apoyarme  con el programa Oracle Next Education (ONE). Mis hobbies son los videojuegos, jugar básquet y programar.  
+          Soy de Ecuador. Estudio Tecnología en Desarrollo de Software en la
+          Escuela Politécnica Nacional (EPN). Ahora por iniciativa propia me
+          encuentro como Trainee Fullstack tomando como base el stack MERN,
+          además de apoyarme con el programa Oracle Next Education (ONE). Mis
+          hobbies son los videojuegos, jugar básquet y programar.
         </p>
 
         <div

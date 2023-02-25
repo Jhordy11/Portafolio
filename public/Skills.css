@@ -7,8 +7,9 @@
 
 .skills{
     width: 100%;
-    height: calc(100vh - 55px);
-    padding-top:  55px;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,8 +212,6 @@ right: var(--desplazmiento-icon-x);;
 }
 @media screen and (min-width: 1920px) {
       .skills{
-        height: auto;
-        padding: 100px;
         gap: 20px;
       }
 }

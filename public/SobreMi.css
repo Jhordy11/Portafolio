@@ -4,18 +4,22 @@
 }
 
 .sobreMi {
-  padding-top: 55px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   width: 100%;
-  height: calc(100vh - 55px);
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
-
+.sobreMi__foto__container {
+  position: relative;
+}
 
 .sobreMi__fotoYo {
+
   width: var(--tamaño-yo);
   height:var(--tamaño-yo);
   border-radius: 100%;
@@ -25,8 +29,10 @@
   position: absolute;
   width:calc(var(--tamaño-yo) + 10px) ;
   height:calc(var(--tamaño-yo) + 10px);
+  inset: 0;
+  top: -5px ;
+  left: -5px;
   z-index: -1;
-  top: calc(50px + (( 240px - var(--tamaño-yo) ) / 2));
   animation: rotar linear infinite 10s;
 }
 
@@ -45,7 +51,6 @@
 }
 
 .sobreMi__presentación{
-  height:calc(100vh - 300px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,12 +179,6 @@
 @media screen and (min-width: 320px) and (max-height: 667px) {
   :root{
     --tamaño-yo: 175px;}
-    .sobreMi__presentación{
-      height:calc(100vh - 250px);
-    }
-    .sobreMi__fondo{
-      top: calc(50px + (( 190px - var(--tamaño-yo) ) / 2));
-    }
     .sobreMi__presentación__titulo {
       font-size: 200% ;
     }
@@ -199,10 +198,6 @@
     flex-direction: row;
     justify-content:center;
     gap:30px;
-  }
-  .sobreMi__fondo{
-    top:calc(((100vh - 55px - var(--tamaño-yo)) / 2) + 50px) ;
-    left:calc(((100% - var(--tamaño-pre) - 30px - var(--tamaño-yo)) / 2) - 5px);
   }
   
   .sobreMi__presentación{
@@ -240,8 +235,8 @@
   .sobreMi{
     width: 600px;
     padding-top:0;
-    height: auto;
-  flex-direction: column;
+    flex-direction: column;
+    padding: 0;
   }
   :root{
     --tamaño-yo: 255px;

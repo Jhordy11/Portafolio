@@ -34,7 +34,7 @@ export default function Portafolio() {
         setPantallaTF(e.changedTouches[0].screenY);
       }}
     >
-      <Navegador moves={{ diferencia, pantallaS }} />
+      <Navegador/>
       <TopScroll/>
       <Inicio />
       {width < 1920 ? <SobreMi /> : ""}

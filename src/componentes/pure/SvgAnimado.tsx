@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "/public/com.css";
 export default function SvgAnimado() {
   const [cambiar, setCambiar] = useState(false);
-  const [pDeCambio, setPDeCambio] = useState(0);
+
   useEffect(() => {
     innerWidth > innerHeight ? setCambiar(true): setCambiar(false);
   }, [innerWidth, innerHeight]);

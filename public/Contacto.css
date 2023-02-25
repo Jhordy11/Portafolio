@@ -7,8 +7,8 @@
 }
 .contacto {
   width: 80%;
-  height: calc(100vh - 125px);
-  padding-top: 40px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,7 +127,7 @@
   color: #faf7ced3;
   text-shadow: -2px 2px 3px rgba(148, 16, 16, 0.8);
   bottom:calc( var(--tamaño-input-yg) + 3 * var(--tamaño-gap-contacto) );
-  right:calc(var(--tamaño-input-x)/2 - 40px );
+  right:calc(var(--tamaño-input-x)/2 - 42px );
   transform: scale(1.1);
 }
 .contacto__inputName:focus,
@@ -272,17 +272,6 @@
 }
 
 
-@media screen and (min-width: 320px) and (max-height: 667px) {
-  :root{
-    --tamaño-input-x:280px;
-    --tamaño-input-yp: 30px;
-    --tamaño-input-yg: 85px;
-    --tamaño-gap-contacto:5px;
-    --tamaño-letra-label:16px;
-  }
-  
-
-}
 @media screen and (min-width: 768px) {
   :root{
     --tamaño-input-x:400px;
@@ -347,23 +336,10 @@
     gap: 10px;
     justify-content: center;
   }
-
-}
-@media screen and (min-width: 1920px) {
-  .contacto {
-    height: auto;
-    padding: 75px;
-    padding-bottom: 100px;
+  .contacto__mensaje {
+    right:calc(var(--tamaño-input-x)/2 - 50px )
   }
 }
-@media screen and (min-width: 768px) and (max-height: 600px) {
-  :root{
-    --tamaño-input-x:400px;
-    --tamaño-input-yp: 30px;
-    --tamaño-input-yg: 120px;
-    --tamaño-gap-contacto:5px;
-    --tamaño-letra-label:16px;
-  }
 
-}
+
 
