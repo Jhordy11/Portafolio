@@ -1,8 +1,9 @@
 import "/public/Proyectos.css";
 import { AiFillHtml5 } from "react-icons/ai";
-import { IoLogoJavascript, IoLogoCss3 } from "react-icons/io";
+import { IoLogoJavascript, IoLogoCss3} from "react-icons/io";
 import { FaReact, FaNode } from "react-icons/fa";
-import { SiTailwindcss, SiExpress } from "react-icons/si";
+import { IoLogoFirebase } from "react-icons/io5";
+import { SiTailwindcss, SiExpress,SiFlutter  } from "react-icons/si";
 import { AiOutlineLine } from "react-icons/ai";
 import CardProyecto from "../pure/CardProyecto";
 import { useEffect, useRef, useState } from "react";
@@ -35,11 +36,11 @@ export default function Proyectos() {
       linkGit: "https://github.com/Jhordy11/Portafolio",
       linkVis: "https://jhordyaguas.vercel.app/",
     },
-    { name: "Ecommerce",
+    { name: "App Topografia",
       imgs: ["p51.jpg", "p52.jpg", "p53.jpg", "p54.jpg", "p55.jpg"],
-      iconos: [<FaReact />,<FaNode /> , <IoLogoCss3 />],
-      linkGit: "https://github.com/Jhordy11/ecommerce",
-      linkVis: "https://jh-shop.vercel.app/",
+      iconos: [<SiFlutter />,<IoLogoFirebase />],
+      linkGit: "https://github.com/Jhordy11",
+      linkVis: "https://apps-1bac3.web.app",
     },
   ];
 
