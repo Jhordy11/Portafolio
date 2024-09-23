@@ -162,19 +162,11 @@ export default function Inicio() {
         >
           <span>
             <span></span>
-            <span>T</span>
+            <span>J</span>
           </span>
           <span>
             <span></span>
-            <span>r</span>
-          </span>
-          <span>
-            <span></span>
-            <span>a</span>
-          </span>
-          <span>
-            <span></span>
-            <span>i</span>
+            <span>u</span>
           </span>
           <span>
             <span></span>
@@ -182,11 +174,19 @@ export default function Inicio() {
           </span>
           <span>
             <span></span>
-            <span>e</span>
+            <span>i</span>
           </span>
           <span>
             <span></span>
-            <span>e</span>
+            <span>o</span>
+          </span>
+          <span>
+            <span></span>
+            <span>r</span>
+          </span>
+          <span>
+            <span></span>
+            <span></span>
           </span>
           <span>
             <span></span>

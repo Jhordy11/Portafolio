@@ -30,10 +30,10 @@ export default function SobreMi() {
           data-aos-delay="200"
         >
           Soy de Ecuador. Estudio Tecnología en Desarrollo de Software en la
-          Escuela Politécnica Nacional (EPN). Ahora por iniciativa propia me
-          encuentro como Trainee Fullstack tomando como base el stack MERN,
-          además de apoyarme con el programa Oracle Next Education (ONE). Mis
-          hobbies son los videojuegos, jugar básquet y programar.
+          Escuela Politécnica Nacional (EPN). He tomoda como base el stack MERN,
+          sin embargo he aprendido varias tecnologías que me han ayudado a comprender 
+          sobre varios ambientes de trabajo y frameworks además de apoyarme con el programa 
+          Oracle Next Education (ONE).
         </p>
 
         <div
